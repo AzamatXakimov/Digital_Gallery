@@ -1,37 +1,49 @@
 import { Link } from "react-router-dom";
 import "./Branding.scss";
 
+// IMAGE IMPORTS 
+import img1 from "../../assets/images/Brending-1.jpg";
+import img2 from "../../assets/images/Brending-2.jpg";
+import img3 from "../../assets/images/Brending-3.jpg";
+import img4 from "../../assets/images/Brending-4.jpg";
+import img5 from "../../assets/images/Brending-5.jpg";
+
 export const Branding = () => {
     const dataTemp = [
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 1,
+            title: "Venere",
+            desc: "Muallif: Digital Generation",
+            img: img1,
+            link: "art/branding:1"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 2,
+            title: "Rase",
+            desc: "Muallif: Digital Generation",
+            img: img2,
+            link: "art/branding:2"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 3,
+            title: "Debo Verde",
+            desc: "Muallif: Digital Generation",
+            img: img3,
+            link: "art/branding:3"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 4,
+            title: "Christian",
+            desc: "Muallif: Digital Generation",
+            img: img4,
+            link: "art/branding:4"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 5,
+            title: "Eximil",
+            desc: "Muallif: Digital Generation",
+            img: img5,
+            link: "art/branding:5"
         },
     ]
     return <>
@@ -44,7 +56,7 @@ export const Branding = () => {
                     {dataTemp.map((item, i) => (
                         <li className="branding-item">
                             <Link className="branding-link" to={item.link}>
-                                <img className="branding-img" src={item.img} alt="" />
+                                <img className="branding-img" src={item.img} alt={item.title} />
                             </Link>
                         </li>
                     ))}

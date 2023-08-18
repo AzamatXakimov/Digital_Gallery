@@ -1,8 +1,53 @@
 import { useEffect } from 'react';
 import './Hero.scss';
 import { Link, useNavigate } from 'react-router-dom';
+
+// IMAGE IMPORTS 
+import Brandingimg2 from "../../assets/images/Brending-2.jpg";
+import DrawHandimg1 from "../../assets/images/mult-film.jpg";
+import Photographsimg15 from "../../assets/images/taniat-muhovazasi.jpg"
+import DigitalDesignimg16 from "../../assets/images/yusupaliyeva.jpg"
+import Brandingimg5 from "../../assets/images/Brending-5.jpg";
 export const Hero = () => {
     const navigate = useNavigate();
+
+    const heroImgData = [
+        {
+            id: 1,
+            title: "Rase",
+            desc: "Muallif: Digital Generation",
+            img: Brandingimg2,
+            link: "art/branding:2"
+        },
+        {
+            id: 2,
+            title: "Multfilm",
+            desc: "Muallif: Digital Generation",
+            img: DrawHandimg1,
+            link: "art/h-draw:1"
+        },
+        {
+            id: 3,
+            title: "Tabiat Muhofazasi",
+            desc: "Muallif: Digital Generation",
+            img: Photographsimg15,
+            link: "art/photographs:15"
+        },
+        {
+            id: 4,
+            title: "YUSUPALIYEVA MARG`UBA",
+            desc: "Muallif: Digital Generation",
+            img: DigitalDesignimg16,
+            link: "art/d-design:16"
+        },
+        {
+            id: 5,
+            title: "Eximil",
+            desc: "Muallif: Digital Generation",
+            img: Brandingimg5,
+            link: "art/branding:5"
+        },
+    ]
 
     useEffect(() => {
 
@@ -83,21 +128,11 @@ export const Hero = () => {
                     </h1>
                     <div id='drag-container'>
                         <div id='spin-container'>
-                            <img className='hero-img' src='https://picsum.photos/id/237/200/300' onClick={() => {
-                                navigate("/")
-                            }}/>
-                            <img className='hero-img' src='https://picsum.photos/id/237/200/300' onClick={() => {
-                                navigate("/")
-                            }}/>
-                            <img className='hero-img' src='https://picsum.photos/id/237/200/300' onClick={() => {
-                                navigate("/")
-                            }}/>
-                            <img className='hero-img' src='https://picsum.photos/id/237/200/300' onClick={() => {
-                                navigate("/")
-                            }}/>
-                            <img className='hero-img' src='https://picsum.photos/id/237/200/300' onClick={() => {
-                                navigate("/")
-                            }}/>
+                            {heroImgData.map((item, i) => (
+                                <img className='hero-img' key={i} src={item.img} onClick={() => {
+                                    navigate(item.link)
+                                }}/>
+                            ))}
                         </div>
                         <div id='ground'></div>
                     </div>

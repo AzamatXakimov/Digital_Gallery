@@ -1,0 +1,19 @@
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // height: 100%;
+    flex-grow: 1;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.profile-main-inner {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+}

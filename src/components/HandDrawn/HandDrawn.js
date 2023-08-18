@@ -8,38 +8,36 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { ImageCard } from '../ImageCard/ImageCard';
 import { Link } from 'react-router-dom';
+
+// IMAGE IMPORTS 
+import img1 from "../../assets/images/mult-film.jpg"
+import img2 from "../../assets/images/ozbekiston-qoraqalpogiston.jpg"
+import img3 from "../../assets/images/about-us.jpg"
+
+
 export const HandDrawn = () => {
 
     const dataTemp = [
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 1,
+            title: "Multfilm",
+            desc: "Muallif: Digital Generation",
+            img: img1,
+            link: "art/h-draw:1"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 2,
+            title: "Oʻzbekiston respublikasi va Qoraqalpogʻiston respublikasi",
+            desc: "Muallif: Digital Generation",
+            img: img2,
+            link: "art/h-draw:2"
         },
         {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
-        },
-        {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
-        },
-        {
-            title: "Sangardak sharsharasi",
-            desc: "Muallif: Xurshid Istamov",
-            img: "https://picsum.photos/id/237/200/300",
-            link: "/"
+            id: 3,
+            title: "UzbekchaYer",
+            desc: "Muallif: Digital Generation",
+            img: img3,
+            link: "art/h-draw:3"
         },
     ]
 
@@ -84,7 +82,7 @@ export const HandDrawn = () => {
 
                     <div className='hand-drawn-link-box'>
                         <Link className='hand-drawn-link' to="/">3D xonada tomosha qilish</Link>
-                        <Link className='hand-drawn-link' to="/">Bo'limni ko'rish</Link>
+                        <Link className='hand-drawn-link' to="selected-by-categories/hand-drawn-pictures">Bo'limni ko'rish</Link>
                     </div>
 				</div>
 			</section>

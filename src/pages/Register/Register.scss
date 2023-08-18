@@ -1,0 +1,37 @@
+.register-form-label {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 24px;
+    color: #99a0a8;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.register-form-checkbox {
+    &:checked ~ .register-form-checkbox-tick-box {
+        background-color: #2563ea;
+        border-color: #2563ea;
+        background-image: url("../../assets/images/tick-icon.svg");
+    }
+}
+
+.register-form-checkbox-tick-box {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border: 1px solid rgba(224, 227, 230, 0.08);
+    border-radius: 5px;
+    transition: background-color 0.2s ease, border-color 0.2s ease, background-image 0.2s ease;
+    background-position: center;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+
+    .light & {
+        border-color: #e0e3e6;
+    }
+}

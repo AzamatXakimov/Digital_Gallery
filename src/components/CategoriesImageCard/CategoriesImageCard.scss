@@ -1,0 +1,58 @@
+.categories-image-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+        & .categories-image-card-info {
+            opacity: 1;
+        }
+
+        & .categories-image-card-img  {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.categories-image-card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.categories-image-card-info {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.50);
+    backdrop-filter: blur(9px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.categories-image-card-title {
+    margin-top: 0;
+    margin-bottom: 2px;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; 
+}
+
+.categories-image-card-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; 
+    color: rgba(255, 255, 255, 0.80);
+}

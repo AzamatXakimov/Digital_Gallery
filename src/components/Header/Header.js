@@ -99,7 +99,7 @@ export const Header = () => {
                         <BurgerIcon/>
                     </button>
                     <Drawer
-                        title={<span className="header-navbar-title">Digital Gallary</span>}
+                        title={<span className={`header-navbar-title ${theme.theme}`}>Digital Gallary</span>}
                         placement={"left"}
                         closable={false}
                         onClose={onClose}
@@ -115,54 +115,54 @@ export const Header = () => {
                     >
                         <ul className="header-navbar-list">
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="/">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="/">
                                     Bosh sahifa
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="about-us">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="about-us">
                                     Biz haqimizda
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="selected-by-categories/digital-design">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="selected-by-categories/digital-design">
                                     Raqamli dizayn
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="selected-by-categories/photograph">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="selected-by-categories/photograph">
                                     Fotosurat
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="selected-by-categories/branding">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="selected-by-categories/branding">
                                     Brending
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="selected-by-categories/hand-drawn-pictures">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="selected-by-categories/hand-drawn-pictures">
                                     Qo'lda chizilgan rasmlar
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="rating">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="rating">
                                     Reyting
                                 </Link>
                             </li>
                             <li className="header-navbar-item">
-                                <Link className="header-navbar-link" to="contact">
+                                <Link className={`header-navbar-link ${theme.theme}`} to="contact">
                                     Bog‘lanish
                                 </Link>
                             </li>
                         </ul>
                         
                         <div className="header-navbar-btn-box">
-                            <button className="header-navbar-theme-btn" onClick={() => {
+                            <button className={`header-navbar-theme-btn ${theme.theme}`} onClick={() => {
                                 hendelChangeTheme()
                             }}>
                                 <SunIcon/>
                             </button>
-                            <Link className="header-navbar-btn-link" to={token.token ? "/profile" : "/login"}>{token.token ? "Profile" : "Kirish"}</Link>
+                            <Link className="header-navbar-btn-link" to={token.token ? "/profile/my-photos" : "/login"}>{token.token ? "Profile" : "Kirish"}</Link>
                         </div>
                     </Drawer>
                 </div>

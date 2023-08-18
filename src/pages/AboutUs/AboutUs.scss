@@ -1,0 +1,242 @@
+.about-us {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.about-us-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 66px;
+}
+
+.about-us-info-box {
+    max-width: 628px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.about-us-info-text {
+    display: inline-block;
+    margin-bottom: 40px;
+    color: var(--main-text-color);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 130%;
+}
+
+.about-us-info-title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: var(--main-text-color);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.about-us-info-desc {
+    margin-top: 0;
+    margin-bottom: 33px;
+    color: var(--main-text-color);
+    font-family: "Space Grotesk";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.about-us-info-link {
+    display: inline-block;
+    max-width: 193px;
+    flex-shrink: 0;
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-family: "Space Grotesk";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    box-shadow: 0px 20px 40px 0px rgba(91, 113, 189, 0.30);
+    text-decoration: none;
+
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow: 0px 0px 34px 0px var(--main-color);
+    }
+    
+    &:active {
+        box-shadow: none;
+    }
+}
+
+
+.about-us-img-box {
+    position: relative;
+    max-width: 636px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.about-us-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    clip-path: none;
+    animation: aboutUsImgAnimation 10s linear;
+}
+
+@keyframes aboutUsImgAnimation {
+    0% {
+        clip-path: circle(100px at 0% 0%);
+    }
+    25% {
+        clip-path: circle(110px at 100% 5%);
+    }
+    35% {
+        clip-path: circle(200px at 100% 100%);
+    }
+    50% {
+        clip-path: circle(100px at 100% 0%);
+    }
+    65% {
+        clip-path: circle(75px at 100% 50%);
+    }
+    75% {
+        clip-path: circle(75px at 50% 50%);
+    }
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+}   
+
+.about-us-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.about-us-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+    .light & {
+        border-bottom-color: #e0e3e6;
+    }
+}
+
+.about-us-item-text {
+    display: inline-block;
+    margin-right: 20px;
+    color: var(--main-text-color);
+    font-size: 20px;
+    font-style: normal;
+    line-height: 130%;
+}
+
+.about-us-item-descbox {
+    max-width: 845px;
+    width: 100%;
+}
+
+.about-us-item-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--main-text-color);
+    font-family: "Space Grotesk";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+@media only screen and (max-width: 1152px) {
+    .about-us-box {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about-us-info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 35px;
+    }
+    
+    .about-us-info-text {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .about-us-info-title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .about-us-info-desc {
+        margin-bottom: 33px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .about-us-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    
+    .about-us-item-text {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .about-us-box {
+        margin-bottom: 23px;
+    }
+    
+    .about-us-info-box {
+        margin-bottom: 29px;
+    }
+    
+    .about-us-info-text {
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    
+    .about-us-info-title {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+    
+    .about-us-info-desc {
+        margin-bottom: 39px;
+    }
+    
+    .about-us-info-link {
+        font-size: 12px;
+    }
+
+    .about-us-item-text {
+        font-size: 12px;
+    }
+    
+    .about-us-item-desc {
+        font-size: 12px;
+    }
+}

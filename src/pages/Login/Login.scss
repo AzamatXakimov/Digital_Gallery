@@ -1,0 +1,434 @@
+.login-wrapper {
+    display: flex;
+    height: 100%;
+}
+
+.login-info-box {
+    width: 65%;
+    padding-top: 61px;
+    padding-bottom: 61px;
+    background-image: url("../../assets/images/log-in-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    max-width: 874px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.login-info-logo {
+    display: inline-block;
+    color: #fff;
+}
+
+.login-info-textbox {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-info-titlebox {
+    max-width: 720px;
+    width: 100%;
+    margin-bottom: 38px;
+}
+
+.login-info-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+.login-info-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.login-info-mini-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-form {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 35%;
+    padding-top: 61px;
+    padding-right: 48px;
+    padding-bottom: 61px;
+    padding-left: 48px;
+    background-color: var(--main-section-bg);
+}
+
+.login-form-wrapper {
+    max-width: 496px;
+    width: 100%;
+}
+
+.login-form-logo-link {
+    display: none;
+    margin-bottom: 58px;
+    color: var(--main-text-color);
+}
+
+.login-form-title {
+    margin-top: 0;
+    margin-bottom: 6px;
+    color:  var(--main-title-color);
+    font-family: "Poppins";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.login-form-desc {
+    margin-top: 0;
+    margin-bottom: 56px;
+    color: #636C79;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-form-color-text {
+    display: inline-block;
+    color: var(--main-color);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.login-form-error-box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 32px;
+    padding-top: 18px;
+    padding-right: 16px;
+    padding-bottom: 18px;
+    padding-left: 16px;
+    border-radius: 10px;
+    border: 1px solid rgb(231, 72, 72);
+    background-color: transparent;
+
+    &.have-errror {
+        display: flex;
+    }
+}
+
+.login-form-error-text {
+    display: inline-block;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: rgb(231, 72, 72);
+}
+
+.login-form-label {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 32px;
+    padding-right: 16px;
+    padding-left: 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(224, 227, 230, 0.08);
+    background-color: transparent;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    
+    .light & {
+        border-color: #e0e3e6;
+    }
+
+    &:last-child {
+        margin-bottom: 14px;
+    }
+    
+    &:focus-within {
+        border-color: var(--main-color);
+        box-shadow: 0px 0px 34px 0px var(--main-color);
+    }
+
+    &::before {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+    }
+
+    &.phone::before {
+        background-image: url("../../assets/images/call.svg");
+    }
+
+    &.user::before {
+        background-image: url("../../assets/images/user.svg");
+    }
+    &.sms::before {
+        background-image: url("../../assets/images/sms.svg");
+    }
+    &.lock::before {
+        background-image: url("../../assets/images/lock.svg");
+    }
+}
+
+
+
+.login-form-input {
+    display: block;
+    flex-grow: 1;
+    margin: 0;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 10px;
+    color: var(--main-title-color);
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color:  #99a0a8;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &[type="number"]::-webkit-inner-spin-button,
+    &[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+}
+
+.login-form-password-show-btn {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../../assets/images/eye-slash.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.login-form-password-forget-link-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.login-form-password-forget-link {
+    display: inline-block;
+    color:  #636c79;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.login-form-btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 18px;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: #2563ea;
+    box-shadow: 0px 20px 40px 0px rgba(91, 113, 189, 0.30);
+    transition: box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow: 0px 0px 34px 0px var(--main-color);
+    }
+    
+    &:active {
+        box-shadow: none;
+    }
+}
+
+.login-form-google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 18px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    background-color: #da5353;
+    box-shadow: 0px 20px 40px 0px #da5353;
+    transition: box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        background-image: url("../../assets/images/Google-icon.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        content: '';
+    }
+    
+    &:hover {
+        box-shadow: 0px 0px 34px 0px #da5353;
+    }
+    
+    &:active {
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 1181px) {
+    .login-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .login-info-box {
+        width: 100%;
+    }
+
+    .login-form {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login-info-textbox {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .login-info-box {
+        display: none;
+    }
+    .login-form-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .login-form-logo-link {
+        display: inline-block;
+    }
+
+    .login-form-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .login-form-desc {
+        margin-bottom: 36px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+    .login-form-color-text {
+        font-size: 12px;
+    }
+    
+    .login-form-label {
+        margin-bottom: 24px;
+    }
+    
+    .login-form-error-box {
+        margin-bottom: 24px;
+    }
+
+    .login-form-error-text {
+        font-size: 14px;
+    }
+    
+    .login-form-input {
+        font-size: 12px;
+        &::placeholder {
+            font-size: 12px;
+        }
+    }
+    
+    .login-form-password-forget-link {
+        font-size: 12px;
+    }
+    
+    .login-form-btn {
+        font-size: 14px;
+    }
+    
+    .login-form-google-btn {
+        font-size: 14px;
+    }
+}
